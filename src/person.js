@@ -1,85 +1,98 @@
 /* eslint-disable */
 export const PERSON = {
   name: {
-    first: 'John',
-    last: 'Doe',
+    first: 'Chong',
+    last: 'Yu',
   },
-  position: 'Software Developer',
+  position: 'Software Engineer',
   birth: {
     year: 1990,
-    location: 'New York'
+    location: 'Jiangsu'
   },
   experience: [{
-      company: 'Company A',
-      position: 'Developer',
-      timeperiod: 'since January 2016',
-      description: 'Programming and watching cute cat videos.'
+    company: 'Splunk',
+    position: 'Software QA Engineer',
+    timeperiod: 'since June 2015',
+    description: 'Programming and watching cute cat videos.',
+    project: [{
+      name: 'Octopus house',
+      description: 'A test as a service platform, providing common used services like proxySSO, data injection with both RESTful backend and web UI',
+      stack: ['Mesos', 'Docker', 'Flask', 'React', 'Bootstrap', 'Redux']
     },
-    {
-      company: 'Company B',
-      position: 'Frontend Developer',
-      timeperiod: 'January 2015 - December 2015',
-      description: 'Fulfillment of extremely important tasks.'
-    },
-    {
-      company: 'Company C',
-      position: 'Trainee',
-      timeperiod: 'March 2014 - December 2014',
-      description: 'Making coffee and baking cookies.'
-    }
-  ],
+      {
+        name: 'System test automation',
+        description: 'A test framework used for all system automation test cases, integrated with several pytest plugins which can detect crashes and collect test logs in real time. ',
+        stack: ['pytest', 'paramiko']
+      },
+      {
+        name: 'splunk-env-switcher',
+        description: 'A cmdline tool to easily switch a cluster of splunk to a different configuration set',
+        stack: ['Ansible']
+      },
+      {
+        name: 'splunk-build-manager',
+        description: 'A static web server which used to fetch product build from remote server regularly',
+        stack: ['twistd', 'requests']
+      },
+      {
+        name: 'thunderbolt100k',
+        description: 'An open source project (https://github.com/cuyu/thunderbolt100k) which used to customise zsh theme',
+        stack: ['python-daemon']
+      }
+    ]
+  }],
   education: [{
-      degree: 'Master of Arts',
-      timeperiod: 'March 2012 - December 2013',
-      description: 'Major in Hacking and Computer Penetration, University A, New York, USA.'
-    },
+    degree: 'Master of Arts',
+    timeperiod: 'September 2012 - July 2015',
+    description: 'Major in Hacking and Computer Penetration, Xi\'an Jiaotong University, Xi\'an, China.'
+  },
     {
       degree: 'Bachelor of Science',
-      timeperiod: 'March 2009 - December 2011',
-      description: 'Major in Engineering, University B, Los Angeles, USA.'
+      timeperiod: 'September 2008 - July 2012',
+      description: 'Major in Automation, Xi\'an Jiaotong University, Xi\'an, China.'
     }
   ],
   // skill level goes 0 to 100
   skills: [{
-      name: 'HTML5',
-      level: '99'
-    },
+    name: 'Python',
+    level: '95'
+  },
     {
-      name: 'CSS3',
+      name: 'pytest',
       level: '95'
     },
     {
       name: 'JavaScript',
-      level: '97'
+      level: '85'
     },
     {
-      name: 'Node.js',
-      level: '93'
-    },
-    {
-      name: 'Angular 2',
-      level: '60'
-    },
-    {
-      name: 'TypeScript',
+      name: 'React',
       level: '80'
     },
     {
-      name: 'ES.Next',
+      name: 'C++',
       level: '70'
     },
     {
+      name: 'CSS',
+      level: '60'
+    },
+    {
+      name: 'Kafka',
+      level: '80'
+    },
+    {
       name: 'Docker',
-      level: '99'
+      level: '80'
     }
   ],
   skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
   contact: {
-    email: 'john.doe@email.com',
-    phone: '0123 456789',
+    email: 'icyarm@icloud.com',
+    phone: '137-6433-3209',
     street: '1234 Broadway',
-    city: 'New York',
-    website: 'johndoe.com',
-    github: 'johnyD'
+    city: 'Shanghai',
+    website: 'http://cuyu.github.com',
+    github: 'cuyu'
   }
-};
+}
