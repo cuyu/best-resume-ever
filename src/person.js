@@ -13,7 +13,7 @@ export const PERSON = {
     company: 'Splunk',
     position: 'Software QA Engineer',
     timeperiod: 'since June 2015',
-    description: 'Programming and watching cute cat videos.',
+    description: 'Programming and testing.',
     project: [{
       name: 'Octopus house',
       description: 'A test as a service platform, providing common used services like proxySSO, data injection with both RESTful backend and web UI',
@@ -30,15 +30,15 @@ export const PERSON = {
         stack: ['Ansible']
       },
       {
+        name: 'datapump',
+        description: 'A platform to collect data from many sources and dispatch data as demand',
+        stack: ['Mesos', 'Auraro', 'Kafka', 'scrapy', 'Flask', 'Bootstrap']
+      },
+      {
         name: 'splunk-build-manager',
         description: 'A static web server which used to fetch product build from remote server regularly',
         stack: ['twistd', 'requests']
       },
-      {
-        name: 'thunderbolt100k',
-        description: 'An open source project (https://github.com/cuyu/thunderbolt100k) which used to customise zsh theme',
-        stack: ['python-daemon']
-      }
     ]
   }],
   education: [{
@@ -52,15 +52,14 @@ export const PERSON = {
       description: 'Major in Automation, Xi\'an Jiaotong University, Xi\'an, China.'
     }
   ],
+  achievement: [{
+
+  }],
   // skill level goes 0 to 100
   skills: [{
     name: 'Python',
     level: '95'
   },
-    {
-      name: 'pytest',
-      level: '95'
-    },
     {
       name: 'JavaScript',
       level: '85'
@@ -78,19 +77,19 @@ export const PERSON = {
       level: '60'
     },
     {
-      name: 'Kafka',
+      name: 'Docker',
       level: '80'
     },
     {
-      name: 'Docker',
-      level: '80'
+      name: 'Machine Learning',
+      level: '70'
     }
   ],
-  skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
+  skillDescription: 'Also familiar with pytest, ansible, scrapy, flask, Kafka, Mesos, Bootstrap, etc.',
   contact: {
     email: 'icyarm@icloud.com',
     phone: '137-6433-3209',
-    street: '1234 Broadway',
+    street: 'Pudong',
     city: 'Shanghai',
     website: 'http://cuyu.github.com',
     github: 'cuyu'

@@ -19,6 +19,11 @@
         <span class="job-title"> {{experience.position}} </span>
         <span class="time-period"> {{experience.timeperiod}}</span>
         <span class="job-description"> {{experience.description}} </span>
+        <div class="project-block" v-for="project in experience.project">
+          <div class="project-name"> {{project.name}} </div>
+          <p class="project-info"> {{project.description}} </p>
+          <span class="tech-stack" v-for="stack in project.stack"> {{stack}} </span>
+        </div>
       </div>
     </div>
     <div class="contact">
@@ -104,19 +109,19 @@ export default Vue.component('left-right', {
     width:100%;
   }
   .half {
-    width:44%;
+    width:45%;
   }
   .half.left {
     float:left;
     text-align:right;
-    padding-left:4%;
-    padding-right:2%;
+    padding-left:3.5%;
+    padding-right:1.5%;
   }
   .half.right {
     float:right;
     text-align:left;
-    padding-right:4%;
-    padding-left:2%;
+    padding-right:3.5%;
+    padding-left:1.5%;
   }
   .center {
     margin-left:auto;
@@ -188,6 +193,40 @@ export default Vue.component('left-right', {
   .experience .experience-block span.job-title {
     font-style:italic;
   }
+  .experience .experience-block .project-block {
+    .project-info {
+      font-size:14px;
+      color: slategray;
+      margin-bottom:0;
+      margin-bottom: 0;
+    }
+    .tech-stack::before {
+      content: "\f0f4";
+      font-family: FontAwesome;
+      padding-left: .2em;
+      padding-right: .2em;
+    }
+    .tech-stack {
+      border: 1px solid;
+      border-radius: 5px;
+      font-size:13px;
+      margin-right: .3em;
+      padding-right: .2em;
+      display: inline-block;
+      width: auto;
+    }
+    .project-name::before {
+      content: "\f13d";
+      font-family: FontAwesome;
+      padding-right: .2em;
+      color: olivedrab;
+      font-size: .9em;
+    }
+    .project-name {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
   .education-block span {
     color:#616161;
   }
@@ -205,8 +244,11 @@ export default Vue.component('left-right', {
     margin-top:20px;
     margin-bottom:10px;
     .skill-block {
-      padding-bottom:10px;
-      display:inline-block;
+      padding-bottom: 5px;
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+      column-count: 2;
       .skill {
         width:100px;
         color:#616161;
