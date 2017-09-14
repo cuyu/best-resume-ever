@@ -14,19 +14,20 @@ export const PERSON = {
     position: 'Software QA Engineer',
     timeperiod: 'since June 2015',
     description: 'Programming and testing.',
-    project: [{
-      name: 'Octopus house',
-      description: 'A test as a service platform, providing common used services like proxySSO, data injection with both RESTful backend and web UI',
-      stack: ['Mesos', 'Docker', 'Flask', 'React', 'Bootstrap']
-    },
+    project: [
       {
         name: 'System test automation',
         description: 'A test framework used for all system automation test cases, integrated with several pytest plugins which can detect crashes and collect test logs in real time. ',
         stack: ['pytest', 'paramiko']
       },
       {
+        name: 'Octopus house',
+        description: 'A test as a service platform, providing common used services like proxySSO, data injection with both RESTful backend and web UI',
+        stack: ['Mesos', 'Docker', 'Flask', 'React', 'Bootstrap']
+      },
+      {
         name: 'splunk-env-switcher',
-        description: 'A cmdline tool to easily switch a cluster of splunk to a different configuration set',
+        description: 'A cmdline tool to switch a cluster of splunk to a different configuration set easily',
         stack: ['Ansible']
       },
       {
@@ -34,36 +35,27 @@ export const PERSON = {
         description: 'A platform to collect data from many sources and dispatch data as demand',
         stack: ['Mesos', 'Auraro', 'Kafka', 'scrapy', 'Flask']
       },
-      {
-        name: 'splunk-build-manager',
-        description: 'A static web server which used to fetch product build from remote server regularly',
-        stack: ['twistd', 'requests']
-      },
     ]
   }],
   education: [{
-    degree: 'Master of Arts',
+    degree: 'Master of Engineering',
     timeperiod: 'September 2012 - July 2015',
-    description: 'Major in Hacking and Computer Penetration, Xi\'an Jiaotong University, Xi\'an, China.'
+    description: 'Major in Artificial ntelligence and Pattern Recognition, Xi\'an Jiaotong University, Xi\'an, China.'
   },
     {
-      degree: 'Bachelor of Science',
+      degree: 'Bachelor of Engineering',
       timeperiod: 'September 2008 - July 2012',
-      description: 'Major in Automation, Xi\'an Jiaotong University, Xi\'an, China.'
+      description: 'Major in Automation and Computer Science , Xi\'an Jiaotong University, Xi\'an, China.'
     }
   ],
   achievements: [
     {
-      name: 'Winner of 2nd hackweek in splunk shanghai',
+      name: 'Winner of 2nd and 4th hackweek in splunk shanghai',
       icon: 'fa-trophy',
     },
     {
       name: 'Scene Text Localization using Edge Analysis and Feature Pool, Neurocomputing, 2016',
       link: 'http://www.sciencedirect.com/science/article/pii/S0925231215015817',
-      icon: 'fa-newspaper-o',
-    },
-    {
-      name: 'xxxxx, 2016',
       icon: 'fa-newspaper-o',
     },
   ],
@@ -97,13 +89,12 @@ export const PERSON = {
       level: '70'
     }
   ],
-  skillDescription: 'Also familiar with pytest, ansible, scrapy, flask, Kafka, Mesos, Bootstrap, etc.',
+  otherKnowledge: ['pytest', 'ansible', 'scrapy', 'flask', 'Kafka', 'Mesos', 'Bootstrap'],
   contact: {
     email: 'icyarm@icloud.com',
     phone: '137-6433-3209',
-    street: 'Pudong',
     city: 'Shanghai',
-    website: 'http://cuyu.github.com',
+    website: 'http://cuyu.github.io',
     github: 'cuyu'
   }
 }

@@ -37,7 +37,7 @@
           <td><a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a></td>
           <td><i class="fa fa-phone" aria-hidden="true"></i></td>
         </tr>
-        <tr>
+        <tr v-if="person.contact.street">
           <td>{{person.contact.street}} <br> {{person.contact.city}}</td>
           <td><i class="fa fa-home" aria-hidden="true"></i></td>
         </tr>
@@ -69,7 +69,7 @@
         </div>
       </div>
     </div>
-    <span class="skills-other"> {{person.skillDescription}} </span>
+    <span class="skills-other"> Also familiar with <span class="knowledge" v-for="name in person.otherKnowledge">{{name}}</span> etc.</span>
     <div class="achievement">
       <h3>Achievements</h3>
       <div class="achievement-block" v-for="achievement in person.achievements">
@@ -206,9 +206,9 @@ export default Vue.component('left-right', {
   }
   .experience .experience-block .project-block {
     .project-info {
-      font-size:14px;
+      font-size:15px;
       color: slategray;
-      margin-bottom:0;
+      margin-top:5px;
       margin-bottom: 0;
     }
     .tech-stack::before {
@@ -230,16 +230,23 @@ export default Vue.component('left-right', {
       content: "\f13d";
       font-family: FontAwesome;
       padding-right: .2em;
-      color: olivedrab;
+      color: #424242;
       font-size: .9em;
     }
     .project-name {
-      margin-top: 5px;
+      margin-top: 10px;
       margin-bottom: 0;
     }
   }
   .achievement-block {
-
+    display: flex;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #616161;
+    i {
+      margin-top: .3em;
+      margin-right: .3em;
+    }
   }
   .education-block span {
     color:#616161;
@@ -252,10 +259,21 @@ export default Vue.component('left-right', {
   }
   .skills-other {
     color:#616161;
-    margin-bottom:10px;
+    margin-bottom:0;
+    .knowledge {
+      color: #424242;
+      font-weight: bold;
+    }
+    // insert comma after each knowledge name
+    .knowledge::after {
+      content: ', ';
+      font-weight: normal;
+      color: #616161;
+      margin-right: .2em;
+    }
   }
   .skills {
-    margin-top:20px;
+    margin-top:10px;
     margin-bottom:10px;
     .skill-block {
       padding-bottom: 5px;
