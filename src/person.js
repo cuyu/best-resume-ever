@@ -17,7 +17,7 @@ export const PERSON = {
     project: [{
       name: 'Octopus house',
       description: 'A test as a service platform, providing common used services like proxySSO, data injection with both RESTful backend and web UI',
-      stack: ['Mesos', 'Docker', 'Flask', 'React', 'Bootstrap', 'Redux']
+      stack: ['Mesos', 'Docker', 'Flask', 'React', 'Bootstrap']
     },
       {
         name: 'System test automation',
@@ -32,7 +32,7 @@ export const PERSON = {
       {
         name: 'datapump',
         description: 'A platform to collect data from many sources and dispatch data as demand',
-        stack: ['Mesos', 'Auraro', 'Kafka', 'scrapy', 'Flask', 'Bootstrap']
+        stack: ['Mesos', 'Auraro', 'Kafka', 'scrapy', 'Flask']
       },
       {
         name: 'splunk-build-manager',
@@ -52,9 +52,21 @@ export const PERSON = {
       description: 'Major in Automation, Xi\'an Jiaotong University, Xi\'an, China.'
     }
   ],
-  achievement: [{
-
-  }],
+  achievements: [
+    {
+      name: 'Winner of 2nd hackweek in splunk shanghai',
+      icon: 'fa-trophy',
+    },
+    {
+      name: 'Scene Text Localization using Edge Analysis and Feature Pool, Neurocomputing, 2016',
+      link: 'http://www.sciencedirect.com/science/article/pii/S0925231215015817',
+      icon: 'fa-newspaper-o',
+    },
+    {
+      name: 'xxxxx, 2016',
+      icon: 'fa-newspaper-o',
+    },
+  ],
   // skill level goes 0 to 100
   skills: [{
     name: 'Python',

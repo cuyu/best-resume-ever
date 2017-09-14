@@ -70,6 +70,16 @@
       </div>
     </div>
     <span class="skills-other"> {{person.skillDescription}} </span>
+    <div class="achievement">
+      <h3>Achievements</h3>
+      <div class="achievement-block" v-for="achievement in person.achievements">
+        <i v-bind:class="['fa', achievement.icon]"></i>
+        <span class="achievement-name">
+          <a v-if="achievement.link" :href="achievement.link"> {{achievement.name}} </a>
+          <div v-else> {{achievement.name}} </div>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 </template>
@@ -100,6 +110,7 @@ export default Vue.component('left-right', {
     color:#616161;
   }
   h3 {
+    margin-top: 10px;
     margin-bottom:0;
   }
   span {
@@ -134,7 +145,7 @@ export default Vue.component('left-right', {
     border:1px solid black;
     text-transform:uppercase;
     padding:10px 20px;
-    margin-top:80px;
+    margin-top:70px;
     margin-bottom:5px;
     font-family:'Open Sans', sans-serif;
     font-size:35px;
@@ -146,13 +157,13 @@ export default Vue.component('left-right', {
     font-family:'Open Sans', sans-serif;
     font-size:smaller;
     color:#757575;
-    margin-bottom:40px;
+    margin-bottom:20px;
   }
   .image {
     width:100px;
     height:100px;
-    margin-top:50px;
-    margin-bottom:50px;
+    margin-top:20px;
+    margin-bottom:25px;
     .img {
       width:100%;
       height:100%;
@@ -215,7 +226,7 @@ export default Vue.component('left-right', {
       display: inline-block;
       width: auto;
     }
-    .project-name::before {
+    .project-name::after {
       content: "\f13d";
       font-family: FontAwesome;
       padding-right: .2em;
@@ -226,6 +237,9 @@ export default Vue.component('left-right', {
       margin-top: 5px;
       margin-bottom: 0;
     }
+  }
+  .achievement-block {
+
   }
   .education-block span {
     color:#616161;
