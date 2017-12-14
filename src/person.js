@@ -27,13 +27,25 @@ export const PERSON = {
       },
       {
         name: 'splunk-env-switcher',
-        description: 'A cmdline tool to switch a cluster of splunk to a different configuration set easily',
-        stack: ['Ansible']
+        description: 'A cmdline tool to switch a cluster of splunk to a set of different configuration set easily',
+        stack: ['Ansible', 'mongodb']
       },
       {
         name: 'datapump',
-        description: 'A platform to collect data from many sources and dispatch data as demand',
+        description: 'A platform to collect data from many sources (using API and crawler) and dispatch data as demand',
         stack: ['Mesos', 'Auraro', 'Kafka', 'scrapy', 'Flask']
+      },
+    ],
+    projectPage2: [
+      {
+        name: 'CSI',
+        description: 'A tool to help triage python code, winning the best internal tool of 5th global hackweek',
+        stack: ['React', 'Jenkins', 'Serialization']
+      },
+      {
+        name: 'decade',
+        description: 'A cmdline tool to configure remote debugging in docker container or remote server with PyCharm',
+        stack: ['Docker', 'paramiko']
       },
     ]
   }],
@@ -50,7 +62,11 @@ export const PERSON = {
   ],
   achievements: [
     {
-      name: 'Winner of 2nd and 4th hackweek in splunk shanghai',
+      name: 'Winner of 2nd, 4th hackweek in splunk shanghai and 5th hackweek in splunk global',
+      icon: 'fa-trophy',
+    },
+    {
+      name: 'Receive spot award of splunk, three times',
       icon: 'fa-trophy',
     },
     {
@@ -81,20 +97,20 @@ export const PERSON = {
       level: '60'
     },
     {
-      name: 'Docker',
-      level: '80'
-    },
-    {
       name: 'Machine Learning',
       level: '70'
     }
   ],
-  otherKnowledge: ['pytest', 'ansible', 'scrapy', 'flask', 'Kafka', 'Mesos', 'Bootstrap'],
+  otherKnowledge: ['Docker', 'pytest', 'ansible', 'git', 'Jenkins', 'scrapy', 'flask', 'Kafka', 'Mesos', 'Bootstrap'],
   contact: {
     email: 'icyarm@icloud.com',
     phone: '137-6433-3209',
     city: 'Shanghai',
     website: 'http://cuyu.github.io',
     github: 'cuyu'
-  }
+  },
+  selfAssessment: ['I am an enthusiastic person and love innovation and collaboration',
+    'Have strong learning ability and willing to take new projects from scratch',
+    'Be responsible and keep commitments',
+    'Easy going and warm hearted'],
 }
