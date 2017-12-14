@@ -13,8 +13,8 @@ export const PERSON = {
     company: 'Splunk',
     position: 'Software QA Engineer',
     timeperiod: 'since June 2015',
-    description: 'Programming and testing.',
-    project: [
+    description: 'Testing and tooling.',
+    projectPage1: [
       {
         name: 'System test automation',
         description: 'A test framework used for all system automation test cases, integrated with several pytest plugins which can detect crashes and collect test logs in real time. ',
@@ -30,13 +30,13 @@ export const PERSON = {
         description: 'A cmdline tool to switch a cluster of splunk to a set of different configuration set easily',
         stack: ['Ansible', 'mongodb']
       },
+    ],
+    projectPage2: [
       {
         name: 'datapump',
         description: 'A platform to collect data from many sources (using API and crawler) and dispatch data as demand',
         stack: ['Mesos', 'Auraro', 'Kafka', 'scrapy', 'Flask']
       },
-    ],
-    projectPage2: [
       {
         name: 'CSI',
         description: 'A tool to help triage python code, winning the best internal tool of 5th global hackweek',
@@ -99,9 +99,13 @@ export const PERSON = {
     {
       name: 'Machine Learning',
       level: '70'
-    }
+    },
+    {
+      name: 'Docker',
+      level: '75'
+    },
   ],
-  otherKnowledge: ['Docker', 'pytest', 'ansible', 'git', 'Jenkins', 'scrapy', 'flask', 'Kafka', 'Mesos', 'Bootstrap'],
+  otherKnowledge: ['pytest', 'ansible', 'git', 'GraphQL', 'Jenkins', 'scrapy', 'flask', 'Kafka', 'Mesos', 'Bootstrap'],
   contact: {
     email: 'icyarm@icloud.com',
     phone: '137-6433-3209',

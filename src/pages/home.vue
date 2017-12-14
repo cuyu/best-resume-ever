@@ -23,6 +23,14 @@
       </router-link>
     </div>
     <div class="preview">
+      <router-link v-bind:to="'/resume/left-right-2'">
+        <div class="preview-wrapper">
+          <img src="../assets/preview/resume-left-right.png" />
+          <span>left-right-2</span>
+        </div>
+      </router-link>
+    </div>
+    <div class="preview">
       <router-link v-bind:to="'/resume/oblique'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-oblique.png" />

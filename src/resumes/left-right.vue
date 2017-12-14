@@ -12,20 +12,6 @@
     </div>
   </div>
   <div class="left half">
-    <div class="experience">
-      <h3>Experience</h3>
-      <div class="experience-block" v-for="experience in person.experience">
-        <span class="company"> {{experience.company}} </span>
-        <span class="job-title"> {{experience.position}} </span>
-        <span class="time-period"> {{experience.timeperiod}}</span>
-        <span class="job-description"> {{experience.description}} </span>
-        <div class="project-block" v-for="project in experience.project">
-          <div class="project-name"> {{project.name}} </div>
-          <p class="project-info"> {{project.description}} </p>
-          <span class="tech-stack" v-for="stack in project.stack"> {{stack}} </span>
-        </div>
-      </div>
-    </div>
     <div class="contact">
       <h3>Contact</h3>
       <table>
@@ -51,6 +37,20 @@
         </tr>
       </table>
     </div>
+    <div class="experience">
+      <h3>Experience</h3>
+      <div class="experience-block" v-for="experience in person.experience">
+        <span class="company"> {{experience.company}} </span>
+        <span class="job-title"> {{experience.position}} </span>
+        <span class="time-period"> {{experience.timeperiod}}</span>
+        <span class="job-description"> {{experience.description}} </span>
+        <div class="project-block" v-for="project in experience.projectPage1">
+          <div class="project-name"> {{project.name}} </div>
+          <p class="project-info"> {{project.description}} </p>
+          <span class="tech-stack" v-for="stack in project.stack"> {{stack}} </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="right half">
     <div class="education">
@@ -70,16 +70,6 @@
       </div>
     </div>
     <span class="skills-other"> Also familiar with <span class="knowledge" v-for="name in person.otherKnowledge">{{name}}</span> etc.</span>
-    <div class="achievement">
-      <h3>Achievements</h3>
-      <div class="achievement-block" v-for="achievement in person.achievements">
-        <i v-bind:class="['fa', achievement.icon]"></i>
-        <span class="achievement-name">
-          <a v-if="achievement.link" :href="achievement.link"> {{achievement.name}} </a>
-          <div v-else> {{achievement.name}} </div>
-        </span>
-      </div>
-    </div>
   </div>
 </div>
 </template>
@@ -176,6 +166,7 @@ export default Vue.component('left-right', {
   }
   .contact {
     width:100%;
+    overflow: hidden;
     table {
       text-align:right;
       float:right;
